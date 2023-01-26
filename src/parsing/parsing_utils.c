@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing_utils.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcadinot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/26 17:57:58 by lcadinot          #+#    #+#             */
+/*   Updated: 2023/01/26 17:58:00 by lcadinot         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
@@ -14,6 +25,30 @@ void	free_tab(char **tab)
 		i++;
 	}
 	free(tab);
+}
+
+int	ft_count_str(char *str, char c)
+{
+	int		i;
+	int		count;
+	int		new_word;
+
+	i = 0;
+	count = 0;
+	while (str[i] != '\0')
+	{
+		new_word = 0;
+		while (str[i] == c && str[i] != '\0')
+			i++;
+		while (str[i] != c && str[i] != '\0')
+		{
+			new_word = 1;
+			i++;
+		}
+		if (new_word == 1)
+			count++;
+	}
+	return (count);
 }
 
 int	count_nbr(char const *s, char c)

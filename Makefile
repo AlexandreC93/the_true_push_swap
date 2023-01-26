@@ -2,8 +2,8 @@ NAME = push_swap
 
 CFLAGS = -Wall -Werror -Wextra -I include/push_swap.h
 
-SRC =	./src/stack_utils/chain_list.c  \
-		./src/stack_utils/chain_list_insertion.c  \
+SRC =	./src/utils/chain_list.c  \
+		./src/utils/chain_list_insertion.c  \
 		main.c \
 		./src/parsing/parsing.c \
 		./src/parsing/parsing_utils.c \
