@@ -61,7 +61,7 @@ void		compare_and_swap(t_list *a, t_element *el1, t_element *el2);
 // t_list		*order_list(t_list *a);
 t_list		*sort_list(t_list *a);
 void		free_tab(char **tab);
-// int			ft_count_str(char *str, char c);
+int			ft_count_str(char *str, char c);
 int			scroll_str_and_check_if_digit(int ac, char **av, int i, int j);
 
 #endif
