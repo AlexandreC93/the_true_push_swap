@@ -53,9 +53,9 @@ void	sort_big_stack(t_list *a)
 	sort_list(a);
 	while (max_num >> bit_max != 0)
 	{
-		printf("[%d]\n", bit_max);
-		printf("[%d]\n", max_num);
-		printf("[%d]\n", max_num >> bit_max);
+		// printf("[%d]\n", bit_max);
+		// printf("[%d]\n", max_num);
+		// printf("[%d]\n", max_num >> bit_max);
 		push_last_bit_one(a, b, size, bit_max);
 		empty_b(a, b);
 		bit_max++;

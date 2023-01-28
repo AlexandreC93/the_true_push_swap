@@ -79,5 +79,6 @@ void	attribute_order(t_list *to_order, t_list *sorted)
 			cmp1 = cmp1->next;
 		}
 	}
+	// print_list(to_order);
 	nbr_become_pos(to_order);
 }
