@@ -33,8 +33,6 @@ void	compare_and_swap(t_list *a, t_element *el1, t_element *el2)
 		el1 = el1->next;
 		el2 = el1->next;
 	}
-	print_list(a);
-
 }
 
 t_list	*sort_list(t_list *a)
@@ -49,11 +47,7 @@ t_list	*sort_list(t_list *a)
 	el1 = copy->first;
 	el2 = copy->first->next;
 	compare_and_swap(a, el1, el2);
-	//  print_list(a);
-
 	attribute_order(a, copy);
-	// print_list(a);
-
 	sup_all_list(copy);
 	return (a);
 }

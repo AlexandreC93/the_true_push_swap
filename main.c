@@ -12,9 +12,9 @@
 
 #include "include/push_swap.h"
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	t_list *a;
+	t_list	*a;
 
 	if (ac < 2)
 		return (0);
@@ -38,7 +38,6 @@ int main(int ac, char **av)
 	else
 		sort_big_stack(a);
 	// print_list(a);
-
 	sup_all_list(a);
 	return (0);
 }
