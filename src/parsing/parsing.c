@@ -102,5 +102,7 @@ t_list	*convert_single_string(char *av)
 
 	split = 1;
 	tab = ft_split(av, ' ');
+	if (tab == NULL)
+		return (NULL);
 	return (parsing(split, ft_count_str(av, ' '), tab, 1));
 }

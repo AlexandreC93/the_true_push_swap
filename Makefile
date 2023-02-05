@@ -2,7 +2,7 @@ NAME = push_swap
 
 CC = clang
 
-CFLAGS = -Wall -Werror -Wextra -g
+CFLAGS = -Wall -Werror -Wextra
 
 SRC =	./src/utils/chain_list.c  \
 		./src/utils/chain_list_insertion.c  \
@@ -23,12 +23,9 @@ OBJ = $(SRC:.c=.o)
 
 all : $(NAME)
 
-$(NAME) : $(OBJ)
+$(NAME) : $(OBJ) include/push_swap.h
 			make -C libft
 			clang -o $(NAME) $(OBJ) $(CFLAGS) -I libft libft/libft.a
-
-malloc_test: $(OBJ)
-		$(CC) $(CFLAGS) -fsanitize=undefined -rdynamic -o $@ ${OBJ} -L. -lmallocator
 
 clean :
 			rm -rf $(OBJ)

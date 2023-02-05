@@ -76,24 +76,24 @@ t_list	*convert_arg_into_list(int split, int ac, char **av)
 	int		nbr;
 	int		limit;
 
+	limit = 1;
 	if (split == 1)
 		limit = 0;
-	else
-		limit = 1;
 	i = ac - 1;
 	nbr = ft_atoi(av[i]);
 	i--;
 	list = initialization(nbr);
+	if (list == NULL)
+		return (NULL);
 	while (limit <= i)
 	{
 		nbr = ft_atoi(av[i]);
 		insertion(list, nbr);
 		i--;
 	}
+	list->nb_elem = ac - 1;
 	if (split == 1)
 		list->nb_elem = ac;
-	else
-		list->nb_elem = ac - 1;
 	return (list);
 }
 

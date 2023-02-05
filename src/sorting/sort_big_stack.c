@@ -47,6 +47,8 @@ void	sort_big_stack(t_list *a)
 	int			bit_max;
 
 	b = initialization(-1);
+	if (b == NULL)
+		return ;
 	size = a->nb_elem;
 	max_num = size - 1;
 	bit_max = 0;

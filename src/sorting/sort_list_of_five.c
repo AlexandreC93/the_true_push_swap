@@ -67,8 +67,17 @@ void	sort_list_of_five(t_list *a)
 	t_list	*b;
 
 	b = initialization(-1);
+	if (b == NULL)
+		return ;
 	pb_zero(a, b);
 	pb_one(a, b);
+	if (a_is_sorted(a))
+	{
+		pa(b, a);
+		pa(b, a);
+		sup_all_list(b);
+		return ;
+	}
 	sort_list_of_three(a, 2, 3, 4);
 	pa(b, a);
 	pa(b, a);

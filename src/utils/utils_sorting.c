@@ -44,6 +44,8 @@ t_list	*sort_list(t_list *a)
 
 	i = 0;
 	copy = copy_list(a);
+	if (copy == NULL)
+		return (NULL);
 	el1 = copy->first;
 	el2 = copy->first->next;
 	compare_and_swap(a, el1, el2);

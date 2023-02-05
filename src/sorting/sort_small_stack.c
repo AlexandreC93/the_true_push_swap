@@ -15,6 +15,8 @@
 void	sort_small_stack(t_list *a)
 {
 	sort_list(a);
+	if (a == NULL)
+		return ;
 	if (a->nb_elem == 2)
 		sa(a);
 	else if (a->nb_elem == 3)

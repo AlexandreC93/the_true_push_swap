@@ -62,6 +62,8 @@ t_list	*copy_list(t_list *a)
 		return (NULL);
 	}
 	copy = initialization(a->first->nbr);
+	if (copy == NULL)
+		return (NULL);
 	index = copy->first;
 	to_cpy = a->first->next;
 	while (to_cpy != NULL)

@@ -22,7 +22,6 @@ int	main(int ac, char **av)
 		a = convert_single_string(av[1]);
 	else
 		a = parsing(0, ac, av, -1);
-	// print_list(a);
 	if (a == NULL)
 	{
 		ft_putstr_fd("Error\n", 2);
@@ -37,7 +36,6 @@ int	main(int ac, char **av)
 		sort_small_stack(a);
 	else
 		sort_big_stack(a);
-	// print_list(a);
 	sup_all_list(a);
 	return (0);
 }
